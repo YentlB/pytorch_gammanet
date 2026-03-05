@@ -1,0 +1,3 @@
+[console_scripts]
+gammanet-evaluate = scripts.evaluate:main
+gammanet-train = scripts.train:main
