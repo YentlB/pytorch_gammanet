@@ -247,6 +247,17 @@ class VGG16GammaNetV2(nn.Module):
         if self.h0_exc is None or self.h0_exc.shape[0] != batch_size:
             self.init_hidden_states(batch_size, x.shape[2], x.shape[3], device)
 
+        # ============================================================
+        # TEMPORAL RECURRENT DYNAMICS
+        # ============================================================
+        # Reset temporal storage at start of forward pass
+        self.temporal_activity = {
+            "h0_exc": [],
+            "h1_exc": [],
+            "h2_exc": [],
+            "h3_exc": [],
+            "h4_exc": [],
+        }
         # Process through timesteps
         for t in range(self.timesteps):
             # === Bottom-up pass ===
@@ -262,6 +273,10 @@ class VGG16GammaNetV2(nn.Module):
             else:
                 self.h0_exc, _, _ = self.fgru_0(x1, self.h0_exc)
                 aligned_0 = self.align_0(self.h0_exc)
+            
+            # Store temporal state
+            self.temporal_activity["h0_exc"].append(self.h0_exc.detach().cpu())
+            
             x1 = self.pool1(aligned_0)
             
             # Block 2: conv2 layers + fGRU_1
@@ -272,6 +287,10 @@ class VGG16GammaNetV2(nn.Module):
             else:
                 self.h1_exc, _, _ = self.fgru_1(x2, self.h1_exc)
                 aligned_1 = self.align_1(self.h1_exc)
+            
+            # Store temporal state
+            self.temporal_activity["h1_exc"].append(self.h1_exc.detach().cpu())
+            
             x2 = self.pool2(aligned_1)
 
             # Block 3: conv3 layers + fGRU_2
@@ -282,6 +301,10 @@ class VGG16GammaNetV2(nn.Module):
             else:
                 self.h2_exc, _, _ = self.fgru_2(x3, self.h2_exc)
                 aligned_2 = self.align_2(self.h2_exc)
+            
+            # Store temporal state
+            self.temporal_activity["h2_exc"].append(self.h2_exc.detach().cpu())
+            
             x3 = self.pool3(aligned_2)
 
             # Block 4: conv4 layers + fGRU_3
@@ -292,6 +315,10 @@ class VGG16GammaNetV2(nn.Module):
             else:
                 self.h3_exc, _, _ = self.fgru_3(x4, self.h3_exc)
                 aligned_3 = self.align_3(self.h3_exc)
+            
+            # Store temporal state
+            self.temporal_activity["h3_exc"].append(self.h3_exc.detach().cpu())
+            
             x4 = self.pool4(aligned_3)
 
             # Block 5: conv5 layers + fGRU_4
@@ -301,6 +328,9 @@ class VGG16GammaNetV2(nn.Module):
             else:
                 self.h4_exc, _, _ = self.fgru_4(x5, self.h4_exc)
             
+            # Store temporal state
+            self.temporal_activity["h4_exc"].append(self.h4_exc.detach().cpu())
+                        
             # === Top-down pass ===
 
             # TD: fGRU_4 → fGRU_3
