@@ -8,8 +8,8 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 
-IMAGE_DIR = Path("/home/yentl/pytorch_gammanet/Images_all_layers")
-MASK_DIR = Path("/home/yentl/pytorch_gammanet/contour_masks")
+IMAGE_DIR = Path("/home/yentl/pytorch_gammanet/Images_all_layers_final")
+MASK_DIR = Path("/home/yentl/pytorch_gammanet/contour_masks_all_layers_final")
 MASK_DIR.mkdir(parents=True, exist_ok=True)
 
 N = 512
@@ -66,8 +66,8 @@ def build_templates():
         # n_points = 5
         # bx_straight = np.full(n_points, np.mean(bx))
         # by_straight = np.linspace(np.min(by), np.max(by), n_points)
-        n_points = 5
-        change = 0.07
+        n_points = 7
+        change = 0.03
 
         bx_straight = np.full(n_points, np.mean(bx))
         by_straight = np.linspace(np.min(by) + change, np.max(by) - change, n_points)
@@ -83,22 +83,20 @@ TEMPLATES = build_templates()
 def parse_filename(path):
     """
     Expected:
-        C_high_BL_0_J053_024.png
-        straight_high_BL_0_J053_024.png
+        C_BL_0_J053_024.png
+        straight_BL_0_J053_024.png
     """
     parts = path.stem.split("_")
 
     shape = parts[0]
-    contrast = parts[1]
-    quadrant = parts[2]
-    position = int(parts[3])
+    quadrant = parts[1]
+    position = int(parts[2])
 
     if shape not in ["C", "straight"]:
         return None
 
     return {
         "shape": shape,
-        "contrast": contrast,
         "quadrant": quadrant,
         "position": position,
     }
