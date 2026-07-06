@@ -1,0 +1,17 @@
+condition,bias_strength,contour_type,contour_quadrant,n_images,n_match,proportion_match
+C_bias,0.25,C,BL,6,6,1.0
+C_bias,0.25,C,BR,6,5,0.8333333333333334
+C_bias,0.25,C,TL,6,6,1.0
+C_bias,0.25,C,TR,6,0,0.0
+baseline,0.0,C,BL,6,6,1.0
+baseline,0.0,C,BR,6,5,0.8333333333333334
+baseline,0.0,C,TL,6,6,1.0
+baseline,0.0,C,TR,6,0,0.0
+baseline,0.0,straight,BL,6,6,1.0
+baseline,0.0,straight,BR,6,1,0.16666666666666666
+baseline,0.0,straight,TL,6,4,0.6666666666666666
+baseline,0.0,straight,TR,6,0,0.0
+straight_bias,0.25,straight,BL,6,6,1.0
+straight_bias,0.25,straight,BR,6,1,0.16666666666666666
+straight_bias,0.25,straight,TL,6,4,0.6666666666666666
+straight_bias,0.25,straight,TR,6,0,0.0
