@@ -8,8 +8,8 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 
-IMAGE_DIR = Path("/home/yentl/pytorch_gammanet/Images_jitter_final")
-MASK_DIR = Path("/home/yentl/pytorch_gammanet/contour_masks_jitter_final")
+IMAGE_DIR = Path("/home/yentl/pytorch_gammanet/Images_quad_final")
+MASK_DIR = Path("/home/yentl/pytorch_gammanet/contour_masks_quad_final")
 MASK_DIR.mkdir(parents=True, exist_ok=True)
 
 N = 512
