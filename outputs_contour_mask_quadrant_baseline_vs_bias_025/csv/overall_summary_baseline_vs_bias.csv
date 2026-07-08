@@ -1,0 +1,5 @@
+condition,use_bias,contour_type,score_channel_mode,n_images,n_correct,proportion_correct,mean_highest_enrichment,mean_true_quadrant_enrichment
+baseline,False,C,matched_channels,24,24,1.0,1.7389754533526538,1.7389754533526538
+baseline,False,straight,matched_channels,24,24,1.0,1.7629215521636727,1.7629215521636727
+matched_bias,True,C,matched_channels,24,24,1.0,1.6299149843215976,1.6299149843215976
+matched_bias,True,straight,matched_channels,24,24,1.0,1.6431422281382169,1.6431422281382169
