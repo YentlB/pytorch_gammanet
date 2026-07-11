@@ -35,12 +35,6 @@ C_BL_0_J050_002.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J050
 C_BL_0_J050_003.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J050_003.png,C,NA,BL,0,50,3
 C_BL_0_J050_004.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J050_004.png,C,NA,BL,0,50,4
 C_BL_0_J050_005.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J050_005.png,C,NA,BL,0,50,5
-C_BL_0_J060_000.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J060_000.png,C,NA,BL,0,60,0
-C_BL_0_J060_001.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J060_001.png,C,NA,BL,0,60,1
-C_BL_0_J060_002.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J060_002.png,C,NA,BL,0,60,2
-C_BL_0_J060_003.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J060_003.png,C,NA,BL,0,60,3
-C_BL_0_J060_004.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J060_004.png,C,NA,BL,0,60,4
-C_BL_0_J060_005.png,/home/yentl/pytorch_gammanet/Images_jitter_final/C_BL_0_J060_005.png,C,NA,BL,0,60,5
 straight_BL_0_J000_000.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J000_000.png,straight,NA,BL,0,0,0
 straight_BL_0_J000_001.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J000_001.png,straight,NA,BL,0,0,1
 straight_BL_0_J000_002.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J000_002.png,straight,NA,BL,0,0,2
@@ -77,9 +71,3 @@ straight_BL_0_J050_002.png,/home/yentl/pytorch_gammanet/Images_jitter_final/stra
 straight_BL_0_J050_003.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J050_003.png,straight,NA,BL,0,50,3
 straight_BL_0_J050_004.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J050_004.png,straight,NA,BL,0,50,4
 straight_BL_0_J050_005.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J050_005.png,straight,NA,BL,0,50,5
-straight_BL_0_J060_000.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J060_000.png,straight,NA,BL,0,60,0
-straight_BL_0_J060_001.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J060_001.png,straight,NA,BL,0,60,1
-straight_BL_0_J060_002.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J060_002.png,straight,NA,BL,0,60,2
-straight_BL_0_J060_003.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J060_003.png,straight,NA,BL,0,60,3
-straight_BL_0_J060_004.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J060_004.png,straight,NA,BL,0,60,4
-straight_BL_0_J060_005.png,/home/yentl/pytorch_gammanet/Images_jitter_final/straight_BL_0_J060_005.png,straight,NA,BL,0,60,5
